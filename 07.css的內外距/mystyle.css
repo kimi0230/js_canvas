@@ -1,0 +1,86 @@
+/* 
+padding 內距
+margin 外距 -> 控制元素跟外部東西的距離
+*/
+
+* {
+    /* border: solid 3px black; */
+    font-family: 微軟正黑體;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    /* 畫面中央 */
+    display: flex;
+    /* 左右置中 */
+    justify-content: center;
+    /* 上下置中 */
+    align-items: center;
+    background-color: #111;
+}
+
+.card {
+    width: 800px;
+    display: flex;
+    border: solid 1px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* .left,.right{
+  border-color: red;
+} */
+.left {
+    width: 35%;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Roasted_coffee_beans.jpg/1280px-Roasted_coffee_beans.jpg);
+    background-size: cover;
+}
+
+.left img {
+    /*   width: 100% */
+    height: 100%
+}
+
+.right {
+    width: 65%;
+    padding: 20px;
+    background-color: #fff;
+    /*   margin-left: 100px; */
+}
+
+.slogan {
+    font-size: 15px;
+    margin-left: 10px;
+    color: #999;
+    font-weight: normal;
+}
+
+ul {
+    /* 瀏覽器預設有內距 */
+    padding-left: 0;
+}
+
+ul li {
+    /* 左右撐滿 */
+    display: inline-block;
+    border: solid 1px #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #562712;
+    color: white;
+    margin-right: 5px;
+}
+
+
+h2 {
+    font-size: 20px;
+    margin-top: 30px;
+    color: #C69288;
+}
+
+p {
+    line-height: 25px
+}
