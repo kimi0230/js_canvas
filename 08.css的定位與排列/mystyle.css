@@ -9,26 +9,39 @@
 
 h3 {
     background-color: #aaa;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 h3.ib {
+    /* inline:自動縮放到內容的範圍 會待在同一行裡
+    block:左右撐滿 */
     display: inline-block;
 }
 
-h3 .left {
-    float: left;
+.left,
+.right {
     background-color: #f24;
+}
+
+h3 .left {
+    /* 靠左漂浮 */
+    float: left;
+    /* background-color: #f24; */
     padding: 10px;
 }
 
 h3 .right {
+    /* 靠右漂浮 */
     float: right;
-    background-color: #f24;
+    /* background-color: #f24; */
     padding: 10px;
 
 }
 
+.floattext {
+    /* 可以在浮動元素的時後 幫你把這東西 把外部容器的高度撐開 */
+    overflow: hidden;
+}
 
 .card {
     width: 500px;
@@ -70,12 +83,14 @@ h3 .right {
 }
 
 .cardAbsolute .rect2 {
+    /* 排版系統外 */
     position: absolute;
     left: 150px;
     top: 50px;
 }
 
 .cardFixed .rect2 {
+    /* 針對視窗的絕對定位 */
     position: fixed;
     left: 450px;
     bottom: 50px;
