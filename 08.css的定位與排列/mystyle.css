@@ -1,0 +1,82 @@
+* {
+    border: solid 1px black
+}
+
+.card {
+
+    display: inline-block;
+}
+
+h3 {
+    background-color: #aaa;
+    overflow: hidden;
+}
+
+h3.ib {
+    display: inline-block;
+}
+
+h3 .left {
+    float: left;
+    background-color: #f24;
+    padding: 10px;
+}
+
+h3 .right {
+    float: right;
+    background-color: #f24;
+    padding: 10px;
+
+}
+
+
+.card {
+    width: 500px;
+    height: 200px;
+}
+
+.rects .rect {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+.rect.rect1 {
+    background-color: blue;
+}
+
+.rect.rect2 {
+    background-color: red;
+}
+
+.rect.rect3 {
+    background-color: green;
+}
+
+.cardStatic .rect2 {
+    position: static;
+    left: 50px;
+    top: 50px;
+}
+
+.cardRelative .rect2 {
+    position: relative;
+    left: 30px;
+    top: 30px;
+}
+
+.cardAbsolute {
+    position: relative;
+}
+
+.cardAbsolute .rect2 {
+    position: absolute;
+    left: 150px;
+    top: 50px;
+}
+
+.cardFixed .rect2 {
+    position: fixed;
+    left: 450px;
+    bottom: 50px;
+}
