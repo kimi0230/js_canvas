@@ -1,0 +1,294 @@
+/* *{
+  border: solid 1px;
+} */
+.flexcard {
+    width: 400px;
+    height: 200px;
+    display: flex;
+    font-size: 30px;
+}
+
+.left {
+    flex: 6;
+    background-color: rgb(255, 221, 56);
+}
+
+.mid {
+    flex: 120px;
+    /*不要縮小*/
+    flex-shrink: 0;
+    /*不要放大*/
+    flex-grow: 0;
+    background-color: rgb(255, 163, 43);
+}
+
+.right {
+    flex: 4;
+    background-color: rgb(255, 109, 56);
+}
+
+
+.flexcard2 {
+    flex-direction: column
+}
+
+.flexcard3 {
+    width: 100%
+}
+
+.flexcard3 .left {
+    flex: 400px;
+}
+
+.flexcard3 .mid {
+    flex: 300px;
+}
+
+.flexcard3 .right {
+    flex: 200px;
+    flex-grow: 0
+}
+
+.flexcard4 {
+    width: 100%
+}
+
+.flexcard4 .left {
+    flex: 400px;
+}
+
+.flexcard4 .mid {
+    flex: 300px;
+}
+
+.flexcard4 .right {
+    flex: 200px;
+}
+
+.flexcard4 .left {
+    flex-shrink: 0
+}
+
+.flexcard5 {
+    flex-direction: row-reverse;
+}
+
+.flexcard6 {
+    flex-direction: column-reverse;
+}
+
+.flexcard7 {
+    width: 400px;
+    height: 200px;
+    display: flex;
+    font-size: 30px;
+}
+
+.flexcard7 .right {
+    order:-1;
+}
+
+.items {
+    height: 300px;
+    display: flex;
+    /*mainaxis跟subaxis要用絕對定位 故需relative*/
+    position: relative;
+    border: solid 4px black
+}
+
+.items.jStart {
+    justify-content: flex-start;
+}
+
+.items.jCenter {
+    justify-content: center;
+}
+
+.items.jEnd {
+    justify-content: flex-end;
+}
+
+.items.aStart {
+    align-items: flex-start;
+}
+
+.items.aCenter {
+    align-items: center;
+}
+
+.items.aEnd {
+    align-items: flex-end;
+}
+
+.items.jBetween {
+    justify-content: space-between;
+}
+
+.items.jAround {
+    justify-content: space-around;
+}
+
+.items.jEvenly {
+    justify-content: space-evenly;
+}
+
+.items.rowReverse {
+    flex-direction: row-reverse;
+}
+
+.mainAxis {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    border: solid 2px red
+}
+
+.subAxis {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 50%;
+    border: solid 2px blue
+}
+
+.item {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    text-align: center;
+    background-color: #eee;
+}
+
+.flexrow {
+    display: flex;
+}
+
+/* > 只有下面的div , 空個的話是所有div */
+.flexrow>div {
+    flex: 1;
+}
+
+/*----*/
+/* html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    padding-top: 100px;
+} */
+
+.flexboxes {
+    border: solid 10px #333;
+    position: relative;
+    display: flex;
+    height: 500px;
+    margin: 50px;
+    padding: 0;
+}
+
+.flexboxes.column .axis.main,
+.flexboxes.column-reverse .axis.main {
+    width: 0px;
+    height: 100%;
+}
+
+.flexboxes.column .axis.main label,
+.flexboxes.column-reverse .axis.main label {
+    top: -50px;
+    right: initial;
+}
+
+.flexboxes.column .axis.sub,
+.flexboxes.column-reverse .axis.sub {
+    width: 100%;
+    height: 0px;
+}
+
+.flexboxes.column .axis.sub label,
+.flexboxes.column-reverse .axis.sub label {
+    right: -120px;
+    top: initial;
+}
+
+.box {
+    width: 15%;
+    height: 15%;
+    background-color: #fff;
+    font-size: 40px;
+}
+
+.axis {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.axis label {
+    position: absolute;
+    right: -120px;
+    white-space: nowrap;
+}
+
+.axis.main {
+    width: 100%;
+    height: 0px;
+    border: solid 2px red;
+    color: red;
+}
+
+.axis.sub {
+    width: 0px;
+    height: 100%;
+    border: solid 2px MediumBlue;
+    color: MediumBlue;
+}
+
+.axis.sub label {
+    position: absolute;
+    top: -50px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    border: solid 2px #666;
+    color: #666;
+    position: relative;
+    z-index: 100;
+}
+
+.box:nth-child(1) {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.box:nth-child(2) {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.box:nth-child(3) {
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+.box:nth-child(4) {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.box:nth-child(5) {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.settings {
+    background-color: #fff;
+}
